@@ -1,0 +1,84 @@
+﻿<Window x:Class="Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Formulario"
+        mc:Ignorable="d"
+        Icon="Contenido/128.ico"
+        Title="Formulario" Height="530" Width="1000" MinWidth="950" MinHeight="500">
+    
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" FontSize="40" TextAlignment="Center" FontWeight="Bold">Formulario</TextBlock>
+        <DockPanel DockPanel.Dock="Bottom">
+            <TextBlock Margin="10" FontFamily="Rubik" HorizontalAlignment="Left" FontSize="20">Jose Carlos Giner Poveda</TextBlock>
+            <WrapPanel Margin="10"  HorizontalAlignment="Right">
+                <Button Margin="0,0,10,0" Width="80">Aceptar</Button>
+                <Button Width="80">Cancelar</Button>
+            </WrapPanel>
+        </DockPanel>
+
+
+         <Image  Margin="10" Source="Contenido/foto.jpg" DockPanel.Dock="Right"></Image>
+
+
+        <StackPanel>
+        
+        <Border BorderBrush="Black" BorderThickness="4" Background="Black" Margin="10,0,0,20" CornerRadius="8">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+                <StackPanel Background="#FF2DCDE6">
+                    <WrapPanel Margin="10,10,0,0">
+                        <TextBlock >Nombre</TextBlock>
+                        <TextBox Margin="19,0,0,10" Width="540"/>
+                        <Image Source="Contenido/info.png" Width="25" ToolTip="Máximo 100 caracteres"></Image>
+                </WrapPanel>
+                <WrapPanel Margin="3">
+                    <TextBlock  Margin="5">Edad</TextBlock>
+                    <TextBox Margin="34,4,0,5" Width="540"></TextBox>
+                    <Image Source="Contenido/info.png" Width="25" ToolTip="Número entero entre 0 y 100"></Image>
+                </WrapPanel>
+                <WrapPanel Margin="3">
+                    <TextBlock Margin="5">Dirección</TextBlock>
+                    <TextBox Margin="10,4,0,10" Width="540"></TextBox>
+                    <Image Source="Contenido/info.png" Width="25" ToolTip="Incluir el código postal"></Image>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+
+            <Border BorderBrush="Black" BorderThickness="4" Margin="10,0,0,0" CornerRadius="8" Background="#FFF0D219">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <WrapPanel>
+                <GroupBox Margin="10" Width="200">
+                    <GroupBox.Header>Aficiones</GroupBox.Header>
+                    <StackPanel Margin="8">
+                        <CheckBox Content="Hacer deporte"></CheckBox>
+                        <CheckBox Content="Viajar"></CheckBox>
+                        <CheckBox Content="Ver series"></CheckBox>
+                        <CheckBox Content="Leer comics"></CheckBox>
+
+
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Margin="10" Width="200">
+                    <GroupBox.Header>Estado Civil</GroupBox.Header>
+                    <StackPanel  Margin="8">
+                        <RadioButton Content="Soltero" GroupName="EstadoCivil"></RadioButton>
+                        <RadioButton Content="Casado"  GroupName="EstadoCivil"></RadioButton>
+                        <RadioButton Content="Divorciado"  GroupName="EstadoCivil"></RadioButton>
+                        <RadioButton Content="Viudo"  GroupName="EstadoCivil"></RadioButton>
+
+
+                    </StackPanel>
+                </GroupBox>
+
+            </WrapPanel>
+        </Border>
+    </StackPanel>
+    </DockPanel>
+</Window>
