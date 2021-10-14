@@ -28,23 +28,34 @@
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
-                <StackPanel Background="#FF2DCDE6">
-                    <WrapPanel Margin="10,10,0,0">
-                        <TextBlock >Nombre</TextBlock>
-                        <TextBox Margin="19,0,0,10" Width="540"/>
-                        <Image Source="Contenido/info.png" Width="25" ToolTip="Máximo 100 caracteres"></Image>
-                </WrapPanel>
-                <WrapPanel Margin="3">
-                    <TextBlock  Margin="5">Edad</TextBlock>
-                    <TextBox Margin="34,4,0,5" Width="540"></TextBox>
-                    <Image Source="Contenido/info.png" Width="25" ToolTip="Número entero entre 0 y 100"></Image>
-                </WrapPanel>
-                <WrapPanel Margin="3">
-                    <TextBlock Margin="5">Dirección</TextBlock>
-                    <TextBox Margin="10,4,0,10" Width="540"></TextBox>
-                    <Image Source="Contenido/info.png" Width="25" ToolTip="Incluir el código postal"></Image>
-                </WrapPanel>
-            </StackPanel>
+                <Grid Background="#FF2DCDE6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Margin="5" Grid.Row="0" Grid.Column="0">Nombre</TextBlock>
+                    <TextBox   Grid.Row="0" Grid.Column="1" Margin="0,5" HorizontalAlignment="Stretch"/>
+                    <Image     Grid.Row="0" Grid.Column="2" Source="Contenido/info.png" Width="25" ToolTip="Máximo 100 caracteres"></Image>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0"  Margin="5">Edad</TextBlock>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="0,4,0,5"></TextBox>
+                    <Image Grid.Row="1" Grid.Column="2" Source="Contenido/info.png" Width="25" ToolTip="Número entero entre 0 y 100"></Image>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Margin="5">Dirección</TextBlock>
+                    <TextBox Grid.Row="2" Grid.Column="1" Margin="0,4,0,5"></TextBox>
+                    <Image Grid.Row="2" Grid.Column="2" Source="Contenido/info.png" Width="25" ToolTip="Incluir el código postal"></Image>
+
+
+                </Grid>
+            
+                
         </Border>
 
 
@@ -71,9 +82,7 @@
                         <RadioButton Content="Soltero" GroupName="EstadoCivil"></RadioButton>
                         <RadioButton Content="Casado"  GroupName="EstadoCivil"></RadioButton>
                         <RadioButton Content="Divorciado"  GroupName="EstadoCivil"></RadioButton>
-                        <RadioButton Content="Viudo"  GroupName="EstadoCivil"></RadioButton>
-
-
+                         <RadioButton Content="Viudo"  GroupName="EstadoCivil"></RadioButton>
                     </StackPanel>
                 </GroupBox>
 
