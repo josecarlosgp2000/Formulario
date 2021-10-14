@@ -10,12 +10,13 @@
     
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="40" TextAlignment="Center" FontWeight="Bold">Formulario</TextBlock>
+        <!-- Debo utilizar el stackpanel orientation horizontal para igualar los botones y no usar un wrappanel-->
         <DockPanel DockPanel.Dock="Bottom">
-            <TextBlock Margin="10" FontFamily="Rubik" HorizontalAlignment="Left" FontSize="20">Jose Carlos Giner Poveda</TextBlock>
-            <WrapPanel Margin="10"  HorizontalAlignment="Right">
+            <TextBlock Margin="10" FontFamily="Rubik" DockPanel.Dock="Left" FontSize="20">Jose Carlos Giner Poveda</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="10"  HorizontalAlignment="Right">
                 <Button Margin="0,0,10,0" Width="80">Aceptar</Button>
                 <Button Width="80">Cancelar</Button>
-            </WrapPanel>
+            </StackPanel>
         </DockPanel>
 
 
@@ -57,7 +58,7 @@
             
                 
         </Border>
-
+            
 
             <Border BorderBrush="Black" BorderThickness="4" Margin="10,0,0,0" CornerRadius="8" Background="#FFF0D219">
                 <Border.Effect>
