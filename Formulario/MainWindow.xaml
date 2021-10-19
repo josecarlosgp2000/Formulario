@@ -7,16 +7,20 @@
         mc:Ignorable="d"
         Title="Formulario" Height="550" Width="850" MinHeight="550" MinWidth="850" Icon="Contenido/128.ico">
     <Window.Resources>
-        <Style TargetType="{x:Type Border}">
+        <Style TargetType="{x:Type Border}" x:Key="borde">
             <Setter Property="BorderThickness" Value="3"></Setter>
             <Setter Property="BorderBrush" Value="Black"></Setter>
             <Setter Property="CornerRadius" Value="5"></Setter>
             <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect></DropShadowEffect>
+                </Setter.Value>
+            </Setter>
         </Style>
-
-
-
-
+ 
+        
+        
         <Style TargetType="{x:Type GroupBox}">
             <Setter Property="Width" Value="200"></Setter>
             <Setter Property="HorizontalAlignment" Value="Left"></Setter>
@@ -39,10 +43,8 @@
             </Grid.ColumnDefinitions>
             <Image Grid.Column="1" Source="Contenido/foto.jpg" Stretch="Fill" Margin="15,0,15,5"></Image>
             <StackPanel Grid.Column="0">
-                <Border  Margin="0,0,0,20" Background="LightSkyBlue">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
+                <Border  Margin="0,0,0,20" Background="LightSkyBlue" Style="{StaticResource borde}">
+                    
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"></ColumnDefinition>
@@ -65,10 +67,8 @@
                         <Image Source="Contenido/info.png" Grid.Row="2" Grid.Column="2" ToolTip="Incluir el código postal"></Image>
                     </Grid>
                 </Border>
-                <Border  Background="LightYellow">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
+                <Border  Background="LightYellow" Style="{StaticResource borde}">
+               
                     <StackPanel Orientation="Horizontal">
                         <GroupBox Header="Aficiones">
                             <StackPanel Margin="10">
